@@ -13,9 +13,10 @@
         cap_sen: cap_sen {
             compatible = "zmk,behavior-hold-tap";
             label = "CAP_SEN";
-            bindings = <&mo>;
+            bindings = <&mo>, <&mkp>;
+
             #binding-cells = <2>;
-            tapping-term-ms = <0>;
+            tapping-term-ms = <200>;
             hold-while-undecided;
         };
 
@@ -24,8 +25,7 @@
             label = "MOUSE_LAYER";
             bindings = <&mo>;
             #binding-cells = <1>;
-            release-after-ms = <0>;
-            quick-release;
+            release-after-ms = <1>;
         };
 
         en_space: en_space {
@@ -195,10 +195,10 @@
 
         mouse {
             bindings = <
-&trans  &trans  &trans    &trans    &trans    &trans                    &trans  &trans    &trans    &trans    &trans  &trans
-&trans  &mo 7   &mkp MB3  &mkp MB2  &mkp MB1  &mo 8                     &mo 8   &mkp MB1  &mkp MB2  &mkp MB3  &mo 7   &trans
-&trans  &trans  &trans    &trans    &trans    &trans                    &trans  &trans    &trans    &trans    &trans  &trans
-                &trans    &trans    &trans    &trans  &trans    &trans  &trans  &trans    &trans    &trans
+&trans  &kp RA(N1)  &kp RA(N2)  &kp RA(N3)  &kp RA(N4)  &kp RA(N5)                    &kp RA(N6)  &kp RA(N7)  &kp RA(N8)  &kp RA(N9)  &kp RA(N0)  &trans
+&trans  &mo 7       &mkp MB3    &mkp MB2    &mkp MB1    &mo 8                         &mo 8       &mkp MB1    &mkp MB2    &mkp MB3    &mo 7       &trans
+&trans  &trans      &trans      &trans      &trans      &trans                        &trans      &trans      &trans      &trans      &trans      &trans
+                    &trans      &trans      &trans      &trans      &trans    &trans  &trans      &trans      &trans      &trans
             >;
 
             display-name = "Mouse";
