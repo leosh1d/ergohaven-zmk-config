@@ -13,11 +13,11 @@
         cap_sen: cap_sen {
             compatible = "zmk,behavior-hold-tap";
             label = "CAP_SEN";
-            bindings = <&mo>, <&mkp>;
-
+            bindings = <&mo>;
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <0>;
             hold-while-undecided;
+            hold-trigger-key-positions = <35>;
         };
 
         mouse_layer: mouse_layer {
@@ -25,7 +25,8 @@
             label = "MOUSE_LAYER";
             bindings = <&mo>;
             #binding-cells = <1>;
-            release-after-ms = <200>;
+            release-after-ms = <0>;
+            quick-release;
         };
 
         en_space: en_space {
